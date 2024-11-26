@@ -240,6 +240,7 @@ element.style.color = "red";
 
 // Class kullanımı
 element.classList.add("highlight"); // CSS dosyasında "highlight" sınıfı tanımlanmıştır
+
 ```
 
 ---
