@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        let num=0;
+        const ul = document.querySelector('ul');
+        const li =ul.children;
+        for (let i = 0; i < li.length; i++) {
+            li[i].addEventListener('mouseover', function(e){
+                debugger;
+                e.target.style.color = 'red';
+                ++num;
+                e.target.textContent = num;
+                debugger;
+
+            });
+        }
+
+        for (let i = 0; i < li.length; i++) {
+            li[i].addEventListener('mouseout', function(e){
+                e.target.style.color = 'black';
+            });
+        }
+    });
+</script>
+</head>
+<body>
+<ul>
+    <li>Lorem.</li>
+    <li>Numquam!</li>
+    <li>Culpa.</li>
+    <li>Fuga!</li>
+    <li>Temporibus.</li>
+    <li>Quibusdam!</li>
+    <li>Laudantium!</li>
+    <li>Eveniet?</li>
+    <li>Tenetur.</li>
+    <li>Illo?</li>
+</ul>
+
+
+</body>
+</html>

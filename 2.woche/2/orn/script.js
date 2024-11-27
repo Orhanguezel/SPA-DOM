@@ -90,6 +90,8 @@ dynamicInput.forEach(li=>{
 });
 
 
+
+
 // soru -9
 const nameInput2 = document.getElementById('name-input');
 const nameDisplay2 = document.getElementById('name-display');
