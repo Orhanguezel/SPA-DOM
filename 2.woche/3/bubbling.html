@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const first = document.getElementById('first');
+            const second = document.getElementById('second');
+            const third = document.getElementById('third');
+            const fourth = document.getElementById('fourth');
+            [first, second, third, fourth].map(target => {
+                target.style.border = "1px solid red";
+                target.style.margin = "10px";
+                target.addEventListener('click', e=> {
+                    console.log("click event at " + e.currentTarget.id);
+                });
+            });
+            third.addEventListener('click', e=> {
+                e.stopPropagation();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>Bubbling</h1>
+    <div id="first">First
+        <div id="second">Second
+            <div id="third">Third</div>
+            <div id="fourth">Fourth</div>
+        </div>
+    </div>
+</body>
+</html>

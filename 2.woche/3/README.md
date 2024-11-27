@@ -1,4 +1,5 @@
 # Dubugging, Event Propagation(bubbling), Event delegation / Mittwoch 27.11.24
+# Dubugging, Event Propagation(bubbling), Event delegation / Mittwoch 27.11.24
 
 ## Lernziele :
 
@@ -22,6 +23,6 @@
 
 ### Tasks ;
 
-- []()
+- [spa-dom-click-to-remove](https://classroom.github.com/a/NcjyfIqf)
 
-- []()
+- [spa-dom-tree-menu](https://classroom.github.com/a/yxEs00GM)
