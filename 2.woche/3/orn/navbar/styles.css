@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-menu ul li {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav-menu ul li:hover {
+  background-color: #444;
+  transition: background-color 0.3s ease;
+}
+
+.nav-menu .dropdown {
+  position: absolute; /* Dropdown'un ana menüye göre hizalanmasını sağlar */
+  top: 100%; /* Ana menünün altına yerleştirir */
+  left: 0; /* Soldan hizalar */
+  background-color: #333;
+  display: none; /* Varsayılan olarak gizli */
+  flex-direction: column;
+  z-index: 100; /* Dropdown'un diğer öğelerin üzerinde görünmesini sağlar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekle */
+  animation: slideDown 0.3s ease;
+}
+
+.nav-menu ul li:hover .dropdown {
+  display: flex;
+  transition: display 0.3s ease;
+}
+
+.dropdown li {
+  padding: 10px 20px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu ul li {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #444;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    position: relative;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #444;
+  }
+
+  .nav-menu ul li:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .dropdown li {
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    background-color: #444;
+    border-bottom: 1px solid #555;
+  }
+
+  .dropdown li:hover {
+    background-color: #555;
+  }
+
+  /* Geçişler ve animasyon */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
